@@ -1,5 +1,5 @@
 """
-Django settings for FinnDict project.
+Django settings for FinnDic project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zmklds)6ave&e(@qeh4bibu6(dugceuuz0)(5j%^&(wgz#*xdv'
+SECRET_KEY = '_i3n4m3)u5b-y%yn9yaywe$!o!a24a)+1f5lx%b0&)=dya2%7x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dictionary',
+    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'FinnDict.urls'
+ROOT_URLCONF = 'FinnDic.urls'
 
-WSGI_APPLICATION = 'FinnDict.wsgi.application'
+WSGI_APPLICATION = 'FinnDic.wsgi.application'
 
 
 # Database
@@ -72,7 +74,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Helsinki'
 
 USE_I18N = True
 
@@ -85,3 +87,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
+
+TEMPLATE_DIRS = [
+    TEMPLATE_PATH,
+]
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    },
+}
