@@ -1,5 +1,5 @@
 """
-Django settings for FinnDic project.
+Django settings for FinnDict project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'FinnDic.urls'
+ROOT_URLCONF = 'FinnDict.urls'
 
-WSGI_APPLICATION = 'FinnDic.wsgi.application'
+WSGI_APPLICATION = 'FinnDict.wsgi.application'
 
 
 # Database
