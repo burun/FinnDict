@@ -24,7 +24,9 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'z0h0l00.webfactional.com'
+]
 
 
 # Application definition
@@ -96,8 +98,10 @@ TEMPLATE_DIRS = [
 ]
 
 STATICFILES_DIRS = (
-    STATIC_PATH,
+    '/home/z0h0l00/src/extra_static_media/',
+    '/home/z0h0l00/webapps/<django_app>/even_more_static_media/',
 )
+STATIC_ROOT = ('/home/z0h0l00/webapps/static_media_app/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -109,3 +113,9 @@ HAYSTACK_CONNECTIONS = {
         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
     },
 }
+
+ADMINS = (('Liang', 'zl198565@163.com'),)
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'mailbox'
+EMAIL_HOST_PASSWORD = 'password'
+SERVER_EMAIL = 'address'
