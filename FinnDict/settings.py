@@ -66,8 +66,8 @@ DATABASES = {
         'NAME': 'finndict_db',
         'USER': 'finndict_user',
         'PASSWORD': 'finndict_password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
