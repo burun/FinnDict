@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '_i3n4m3)u5b-y%yn9yaywe$!o!a24a)+1f5lx%b0&)=dya2%7x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = [
-    'z0h0l00.webfactional.com'
+    'finndict.com'
 ]
 
 
@@ -98,10 +98,8 @@ TEMPLATE_DIRS = [
 ]
 
 STATICFILES_DIRS = (
-    '/home/z0h0l00/src/extra_static_media/',
-    '/home/z0h0l00/webapps/<django_app>/even_more_static_media/',
 )
-STATIC_ROOT = ('/home/z0h0l00/webapps/static_media_app/')
+STATIC_ROOT = BASE_DIR.parent.child('static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
