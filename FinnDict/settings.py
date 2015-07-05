@@ -25,7 +25,7 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = [
-    'finndict.com'
+    '.finndict.com'
 ]
 
 
@@ -63,9 +63,9 @@ WSGI_APPLICATION = 'FinnDict.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'finndict_db',
-        'USER': 'finndict_user',
-        'PASSWORD': 'finndict_password',
+        'NAME': 'django',
+        'USER': 'django',
+        'PASSWORD': 'KJmCSBw05h',
         'HOST': 'localhost',
         'PORT': '',
     }
