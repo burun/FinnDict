@@ -25,7 +25,9 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = [
-    '.finndict.com'
+    '.finndict.com',
+    '.finndict.com.',
+    '127.0.0.1',
 ]
 
 
