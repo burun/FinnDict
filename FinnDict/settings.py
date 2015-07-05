@@ -99,7 +99,7 @@ TEMPLATE_DIRS = [
 
 STATICFILES_DIRS = (
 )
-STATIC_ROOT = BASE_DIR.parent.child('static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
