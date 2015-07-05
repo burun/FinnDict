@@ -65,7 +65,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'finndict_db',
         'USER': 'finndict_user',
-        'PASSWORD': 'finndict_password',
+        'PASSWORD': 'rate17pi',
         'HOST': 'localhost',
         'PORT': '',
     }
