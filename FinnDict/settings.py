@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dictionary',
-    'haystack',
+    #'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
