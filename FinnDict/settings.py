@@ -67,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'django',
         'USER': 'django',
-        'PASSWORD': '0aRSIxPOcd',
+        'PASSWORD': 'MYdU75Y2PJ',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -113,9 +113,3 @@ HAYSTACK_CONNECTIONS = {
         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
     },
 }
-
-ADMINS = (('Liang', 'zl198565@163.com'),)
-EMAIL_HOST = 'smtp.webfaction.com'
-EMAIL_HOST_USER = 'mailbox'
-EMAIL_HOST_PASSWORD = 'password'
-SERVER_EMAIL = 'address'
